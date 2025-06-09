@@ -3,7 +3,7 @@ const router = express.Router();
 const userController = require("../controllers/userController");
 
 router.get("/", (req, res) => {
-  res.send("Welcome Asiya to The User Management API");
+  res.send("Welcome to The User Management API");
 });
 
 router.get("/users", userController.getUsers);
