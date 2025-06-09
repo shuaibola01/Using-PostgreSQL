@@ -1,15 +1,18 @@
 const express = require("express");
+const {
+  getAllUsers,
+  getUserById,
+  createUser,
+  updateUser,
+  deleteUser,
+} = require("../controllers/userController");
+
 const router = express.Router();
-const userController = require("../controllers/userController");
 
-router.get("/", (req, res) => {
-  res.send("Welcome to The User Management API");
-});
-
-router.get("/users", userController.getUsers);
-router.get("/users/:id", userController.getUserById);
-router.post("/users", userController.createUser);
-router.put("/users/:id", userController.updateUser);
-router.delete("/users/:id", userController.deleteUser);
+router.get("/", getAllUsers);
+router.get("/:id", getUserById);
+router.post("/", createUser);
+router.put("/:id", updateUser);
+router.delete("/:id", deleteUser);
 
 module.exports = router;

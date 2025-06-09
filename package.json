@@ -4,7 +4,8 @@
   "description": "A simple CRUD API using Express.js and PostgreSQL",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
